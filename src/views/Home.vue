@@ -38,8 +38,8 @@ export default {
                     paragraph:
                         ' Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others. ',
                     callToAction: 'Get an invite',
-                    backgroundColor: 'black',
-                    textColor: 'white',
+                    backgroundColor: '#000000',
+                    textColor: '#ffffff',
                     image: 'desktop/create-and-share.jpg',
                 },
                 {
@@ -47,8 +47,8 @@ export default {
                     paragraph:
                         'We provide design templates to ensure your stories look terrific. Easily add photos, text, embed maps and media from other networks. Then share your story with everyone.',
                     callToAction: 'View the stories',
-                    backgroundColor: 'white',
-                    textColor: 'black',
+                    backgroundColor: '#ffffff',
+                    textColor: '#000000',
                     image: 'desktop/beautiful-stories.jpg',
                 },
                 {
@@ -56,8 +56,8 @@ export default {
                     paragraph:
                         'Photosnap can help you create stories that resonate with your audience.  Our tool is designed for photographers of all levels, brands, businesses you name it. ',
                     callToAction: 'View the stories',
-                    backgroundColor: 'white',
-                    textColor: 'black',
+                    backgroundColor: '#ffffff',
+                    textColor: '#000000',
                     image: 'desktop/designed-for-everyone.jpg',
                 },
             ],

@@ -7,7 +7,7 @@
         :style="{ background: backgroundColor, color: textColor }"
     >
         <div class="headline__heading">{{ heading }}</div>
-        <p class="headline__paragraph">
+        <p class="headline__paragraph" :style="{ color: `${textColor}b6` }">
             {{ paragraph }}
         </p>
         <div class="headline__call-to-action">
@@ -56,7 +56,7 @@ export default {
     &__paragraph {
         padding: 5rem 0;
         font-size: 1.6rem;
-        opacity: 60%;
+        // opacity: 60%;
         line-height: 25px;
     }
     &__call-to-action {
