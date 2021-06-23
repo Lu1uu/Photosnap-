@@ -47,6 +47,9 @@ export default {
     justify-content: space-between;
     padding: 2rem 5rem;
     background: white;
+    &__menu {
+        cursor: pointer;
+    }
 }
 .menu {
     background: white;
@@ -60,6 +63,7 @@ export default {
         flex-direction: column;
         text-transform: uppercase;
         a {
+            text-align: center;
             color: black;
             margin-bottom: 2rem;
             font-size: 1.6rem;
