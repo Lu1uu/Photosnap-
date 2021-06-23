@@ -13,6 +13,16 @@ const routes = [
         name: 'Stories',
         component: Stories,
     },
+    {
+        path: '/features',
+        name: 'features',
+        redirect: '/',
+    },
+    {
+        path: '/pricing',
+        name: 'pricing',
+        redirect: '/',
+    },
 ]
 
 const router = createRouter({

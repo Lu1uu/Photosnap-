@@ -16,9 +16,9 @@
     </nav>
     <div v-if="isMenuOpen" class="menu">
         <div class="menu__links">
-            <router-link to="/">STORIES</router-link>
-            <router-link to="/">features</router-link>
-            <router-link to="/">pricing</router-link>
+            <router-link to="/stories">STORIES</router-link>
+            <router-link to="/features">features</router-link>
+            <router-link to="/pricing">pricing</router-link>
         </div>
         <div class="menu__line"></div>
         <button class="menu__call-to-action">GET AN INVITE</button>

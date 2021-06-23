@@ -37,7 +37,7 @@
         </div>
         <nav class="footer__nav">
             <router-link to="/">Home</router-link>
-            <router-link to="/">stories</router-link>
+            <router-link to="/stories">stories</router-link>
             <router-link to="/">features</router-link>
             <router-link to="/">pricing</router-link>
         </nav>
