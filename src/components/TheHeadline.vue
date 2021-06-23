@@ -1,12 +1,17 @@
 <template>
     <div class="hero">
-        <img :src="require(`@/assets/home/${image}`)" alt="image" />
+        <img :src="require(`@/assets/${image}`)" alt="image" />
     </div>
     <div
         class="headline"
         :style="{ background: backgroundColor, color: textColor }"
     >
-        <div class="headline__heading">{{ heading }}</div>
+        <p class="headline__sub-heading">{{ subHeading }}</p>
+        <p class="headline__heading">{{ heading }}</p>
+        <div v-if="author" class="headline__info">
+            <span class="headline__date">{{ date }}</span> by
+            <span class="headline__author">{{ author }}</span>
+        </div>
         <p class="headline__paragraph" :style="{ color: `${textColor}b6` }">
             {{ paragraph }}
         </p>
@@ -21,7 +26,7 @@
                 <g
                     fill="none"
                     fill-rule="evenodd"
-                    :stroke="textColor === 'white' ? 'white' : 'black'"
+                    :stroke="textColor === '#ffffff' ? '#ffffff' : '#000000'"
                 >
                     <path d="M0 7h41.864M35.428 1l6 6-6 6" />
                 </g>
@@ -39,6 +44,9 @@ export default {
         'backgroundColor',
         'textColor',
         'image',
+        'subHeading',
+        'date',
+        'author',
     ],
 }
 </script>
@@ -53,8 +61,13 @@ export default {
         line-height: 40px;
         text-transform: uppercase;
     }
+    &__sub-heading {
+        padding: 3rem 0;
+        font-size: 1.6rem;
+        letter-spacing: 2.5px;
+    }
     &__paragraph {
-        padding: 5rem 0;
+        padding: 3rem 0;
         font-size: 1.6rem;
         // opacity: 60%;
         line-height: 25px;
@@ -69,6 +82,13 @@ export default {
         p {
             padding-right: 2rem;
         }
+    }
+    &__info {
+        padding: 2rem 0;
+        font-size: 1.5rem;
+    }
+    &__date {
+        opacity: 60%;
     }
 }
 .hero {

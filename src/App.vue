@@ -1,6 +1,20 @@
 <template>
+    <TheNavigation />
     <router-view />
+    <TheFooter />
 </template>
+
+<script>
+import TheNavigation from '@/components/TheNavigation'
+import TheFooter from '@/components/TheFooter'
+
+export default {
+    components: {
+        TheNavigation,
+        TheFooter,
+    },
+}
+</script>
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
@@ -24,5 +38,11 @@ body {
     width: 100vw;
     background: slategray;
     font-family: 'DM Sans', sans-serif;
+}
+
+a,
+a:visited {
+    // color: white;
+    text-decoration: none;
 }
 </style>

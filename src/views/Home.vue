@@ -1,5 +1,4 @@
 <template>
-    <TheNavigation />
     <TheHeadline
         v-for="headline in headlines"
         :key="headline.paragraph"
@@ -17,21 +16,48 @@
         :author="blogInfo.author"
         :image="blogInfo.image"
     />
+    <TheFeature
+        v-for="feature in features"
+        :key="feature.paragraph"
+        :image="feature.image"
+        :heading="feature.heading"
+        :paragraph="feature.paragraph"
+    />
 </template>
 
 <script>
-import TheNavigation from '@/components/TheNavigation'
 import TheHeadline from '@/components/TheHeadline'
 import TheBlog from '@/components/TheBlog'
+import TheFeature from '@/components/TheFeature'
 
 export default {
     components: {
-        TheNavigation,
+        TheFeature,
         TheHeadline,
         TheBlog,
     },
     data() {
         return {
+            features: [
+                {
+                    image: 'desktop/responsive.svg',
+                    heading: '100% Responsive',
+                    paragraph:
+                        'No matter which the device you’re on, our site is fully responsive and stories look beautiful on any screen.',
+                },
+                {
+                    image: 'desktop/no-limit.svg',
+                    heading: 'No Photo Upload Limit',
+                    paragraph:
+                        'Our tool has no limits on uploads or bandwidth. Freely upload in bulk and share all of your stories in one go.',
+                },
+                {
+                    image: 'desktop/embed.svg',
+                    heading: 'Available to Embed',
+                    paragraph:
+                        'Embed Tweets, Facebook posts, Instagram media, Vimeo or YouTube videos, Google Maps, and more. ',
+                },
+            ],
             headlines: [
                 {
                     heading: 'CREATE AND SHARE YOUR PHOTO STORIES',
@@ -40,7 +66,7 @@ export default {
                     callToAction: 'Get an invite',
                     backgroundColor: '#000000',
                     textColor: '#ffffff',
-                    image: 'desktop/create-and-share.jpg',
+                    image: 'home/desktop/create-and-share.jpg',
                 },
                 {
                     heading: 'BEAUTIFUL STORIES EVERY TIME',
@@ -49,7 +75,7 @@ export default {
                     callToAction: 'View the stories',
                     backgroundColor: '#ffffff',
                     textColor: '#000000',
-                    image: 'desktop/beautiful-stories.jpg',
+                    image: 'home/desktop/beautiful-stories.jpg',
                 },
                 {
                     heading: 'designed for everyone',
@@ -58,7 +84,7 @@ export default {
                     callToAction: 'View the stories',
                     backgroundColor: '#ffffff',
                     textColor: '#000000',
-                    image: 'desktop/designed-for-everyone.jpg',
+                    image: 'home/desktop/designed-for-everyone.jpg',
                 },
             ],
             blogInfos: [
