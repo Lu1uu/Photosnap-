@@ -67,7 +67,7 @@ export default {}
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 6rem;
+    padding: 5rem 3rem;
     background: black;
     color: white;
 

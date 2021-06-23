@@ -75,7 +75,8 @@ export default {
     &__call-to-action {
         background: black;
         color: white;
-        padding: 2rem 8rem;
+        text-align: center;
+        padding: 2rem 0rem;
         width: 100%;
         margin-top: 3rem;
         border: none;
