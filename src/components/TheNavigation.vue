@@ -77,6 +77,7 @@ export default {
         background: rgba(0, 0, 0, 0.2);
     }
     &__call-to-action {
+        cursor: pointer;
         background: black;
         color: white;
         text-align: center;

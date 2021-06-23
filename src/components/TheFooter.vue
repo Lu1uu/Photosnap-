@@ -73,6 +73,7 @@ export default {}
 
     &__icons {
         i {
+            cursor: pointer;
             font-size: 3rem;
             margin: 0 1rem;
         }

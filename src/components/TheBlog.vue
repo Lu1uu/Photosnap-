@@ -64,6 +64,7 @@ export default {
         margin: 2rem 0;
     }
     &__call-to-action {
+        cursor: pointer;
         line-height: 1.6rem;
         width: 100%;
         display: flex;
