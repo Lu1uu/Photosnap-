@@ -1,8 +1,12 @@
 <template>
     <nav class="nav">
-        <div class="nav__logo">
-            <img src="@/assets/shared/desktop/logo.svg" alt="" />
-        </div>
+        <router-link class="nav__logo" to="/">
+            <img
+                @click="this.isMenuOpen = false"
+                src="@/assets/shared/desktop/logo.svg"
+                alt=""
+            />
+        </router-link>
         <div @click="toggleMenu()" class="nav__menu">
             <img
                 :src="
@@ -16,9 +20,15 @@
     </nav>
     <div v-if="isMenuOpen" class="menu">
         <div class="menu__links">
-            <router-link to="/stories">STORIES</router-link>
-            <router-link to="/features">features</router-link>
-            <router-link to="/pricing">pricing</router-link>
+            <router-link @click="toggleMenu()" to="/stories"
+                >STORIES</router-link
+            >
+            <router-link @click="toggleMenu()" to="/features"
+                >features</router-link
+            >
+            <router-link @click="toggleMenu()" to="/pricing"
+                >pricing</router-link
+            >
         </div>
         <div class="menu__line"></div>
         <button class="menu__call-to-action">GET AN INVITE</button>

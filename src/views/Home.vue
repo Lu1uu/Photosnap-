@@ -36,6 +36,9 @@ export default {
         TheHeadline,
         TheBlog,
     },
+    mounted() {
+        window.scrollTo(0, 0)
+    },
     data() {
         return {
             features: [
