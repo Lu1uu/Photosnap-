@@ -82,7 +82,7 @@ export default {
         text-align: center;
         padding: 2rem 0rem;
         width: 100%;
-        margin-top: 3rem;
+        margin-top: 2rem;
         border: none;
         letter-spacing: 2.5px;
         font-weight: 700;
