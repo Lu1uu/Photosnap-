@@ -84,7 +84,7 @@ export default {
         }
     }
     &__info {
-        padding: 2rem 0;
+        padding-top: 2rem;
         font-size: 1.5rem;
     }
     &__date {
