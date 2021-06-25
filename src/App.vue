@@ -24,6 +24,7 @@ export default {
     --color-gradient-2: hsl(329, 36%, 59%);
     --color-gradient-3: hsl(229, 100%, 68%);
     --color-light-grey: hsl(0, 0%, 87%);
+    --color-gray: hsl(0, 0%, 59%);
 }
 
 html {
@@ -36,7 +37,7 @@ html {
 }
 body {
     width: 100vw;
-    background: slategray;
+    background: white;
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -44,5 +45,14 @@ a,
 a:visited {
     // color: white;
     text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.px-1 {
+    padding: 3rem;
 }
 </style>

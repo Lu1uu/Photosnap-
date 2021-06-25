@@ -1,6 +1,4 @@
 <template>
-    <!-- <img :src="require(`@/assets/home/mobile/${image}`)" alt="image" /> -->
-
     <div
         class="blog"
         :style="{

@@ -15,7 +15,7 @@
         <p class="headline__paragraph" :style="{ color: `${textColor}b6` }">
             {{ paragraph }}
         </p>
-        <div class="headline__call-to-action">
+        <div v-show="!!callToAction" class="headline__call-to-action">
             <p>{{ callToAction }}</p>
             <svg
                 class="headline__arrow"
@@ -53,7 +53,8 @@ export default {
 
 <style lang="scss" scoped>
 .headline {
-    padding: 7rem 3.5rem;
+    padding: 5rem 3.5rem;
+    padding-top: 1rem;
     &__heading {
         font-size: 3.8rem;
         font-weight: bold;
