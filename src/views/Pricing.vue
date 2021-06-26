@@ -9,7 +9,7 @@
         :image="headline.image"
     />
     <div class="container px-1">
-        <ToggleSwitch />
+        <ToggleSwitch @togglePrices="togglePrices" />
         <PriceCard
             v-for="pricing in pricings"
             :key="pricing.planType"
@@ -70,6 +70,7 @@ export default {
     },
     data() {
         return {
+            originalPrice: true,
             features: [
                 {
                     feature: 'Unlimited story posting',
@@ -140,6 +141,21 @@ export default {
                 },
             ],
         }
+    },
+    methods: {
+        togglePrices() {
+            this.pricings = this.pricings.map((plan) => {
+                let [, price] = plan.price.match(/\$(\w+)/)
+                price = +price
+                if (this.originalPrice) {
+                    price *= 10
+                } else {
+                    price /= 10
+                }
+                return { ...plan, price: `$${price}.00` }
+            })
+            this.originalPrice = !this.originalPrice
+        },
     },
 }
 </script>

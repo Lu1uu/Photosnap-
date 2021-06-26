@@ -2,12 +2,23 @@
     <div class="toggle-switch">
         <p>Monthly</p>
         <label class="switch">
-            <input type="checkbox" />
+            <input type="checkbox" @click="toggleSwitch" />
             <span class="slider round"></span>
         </label>
         <p>Yearly</p>
     </div>
 </template>
+
+<script>
+export default {
+    emits: ['togglePrices'],
+    methods: {
+        toggleSwitch() {
+            this.$emit('togglePrices')
+        },
+    },
+}
+</script>
 
 <style lang="scss" scoped>
 .toggle-switch {
