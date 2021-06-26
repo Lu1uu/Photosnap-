@@ -9,6 +9,7 @@
         :image="headline.image"
     />
     <div class="container px-1">
+        <ToggleSwitch />
         <PriceCard
             v-for="pricing in pricings"
             :key="pricing.planType"
@@ -55,12 +56,14 @@
 import TheHeadline from '@/components/TheHeadline'
 import PriceCard from '@/components/PriceCard'
 import PricePlan from '@/components/PricePlan'
+import ToggleSwitch from '@/components/UI/ToggleSwitch'
 
 export default {
     components: {
         PricePlan,
         PriceCard,
         TheHeadline,
+        ToggleSwitch,
     },
     mounted() {
         window.scrollTo(0, 0)
