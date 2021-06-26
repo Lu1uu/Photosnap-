@@ -38,8 +38,8 @@
         <nav class="footer__nav">
             <router-link to="/">Home</router-link>
             <router-link to="/stories">stories</router-link>
-            <router-link to="/">features</router-link>
-            <router-link to="/">pricing</router-link>
+            <router-link to="/features">features</router-link>
+            <router-link to="/pricing">pricing</router-link>
         </nav>
         <div class="footer__call-to-action">
             <p>Get an invite</p>
@@ -83,6 +83,7 @@ export default {}
         margin-top: 5rem;
         text-align: center;
         a {
+            color: white;
             &:visited {
                 color: white;
             }

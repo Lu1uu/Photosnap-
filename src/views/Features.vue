@@ -42,6 +42,9 @@ export default {
         TheFeature,
         TheHeadline,
     },
+    mounted() {
+        window.scrollTo(0, 0)
+    },
     data() {
         return {
             blogInfo: {

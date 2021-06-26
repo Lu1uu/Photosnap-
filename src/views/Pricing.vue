@@ -18,19 +18,89 @@
             :planType="pricing.planType"
             :price="pricing.price"
         />
+        <h2
+            style="  letter-spacing: 2px;
+            font-size: 1.2rem; text-transform: uppercase; padding-bottom: 1rem;"
+        >
+            The Features
+        </h2>
+        <hr />
+        <br />
+        <PricePlan
+            v-for="feature in features"
+            :key="feature.feature"
+            :feature="feature.feature"
+            :checkboxes="feature.checkboxes"
+        />
+    </div>
+    <div class="beta">
+        <h2 class="beta__heading">We’re in beta. Get your invite today!</h2>
+        <div class="beta__call-to-action">
+            <p>GET AN INVITE</p>
+            <svg
+                class="headline__arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                width="43"
+                height="14"
+            >
+                <g fill="none" fill-rule="evenodd" stroke="#fff">
+                    <path d="M0 7h41.864M35.428 1l6 6-6 6" />
+                </g>
+            </svg>
+        </div>
     </div>
 </template>
 
 <script>
 import TheHeadline from '@/components/TheHeadline'
 import PriceCard from '@/components/PriceCard'
+import PricePlan from '@/components/PricePlan'
+
 export default {
     components: {
+        PricePlan,
         PriceCard,
         TheHeadline,
     },
+    mounted() {
+        window.scrollTo(0, 0)
+    },
     data() {
         return {
+            features: [
+                {
+                    feature: 'Unlimited story posting',
+                    checkboxes: ['x', 'x', 'x'],
+                },
+                {
+                    feature: 'unlimited photo upload',
+                    checkboxes: ['x', 'x', 'x'],
+                },
+                {
+                    feature: 'embedding custom content',
+                    checkboxes: ['', 'x', 'x'],
+                },
+                {
+                    feature: 'customize metadata',
+                    checkboxes: ['', 'x', 'x'],
+                },
+                {
+                    feature: 'advanced metric',
+                    checkboxes: ['', 'x', 'x'],
+                },
+                {
+                    feature: 'photo downloads',
+                    checkboxes: ['', '', 'x'],
+                },
+                {
+                    feature: 'search engine indexing',
+                    checkboxes: ['', '', 'x'],
+                },
+                {
+                    feature: 'custom analytics',
+                    checkboxes: ['', '', 'x'],
+                },
+            ],
             headline: {
                 paragraph:
                     'Create a your stories, Photosnap is a platform for photographers and visual storytellers. It’s the simple way to create and share your photos.',
@@ -71,4 +141,35 @@ export default {
 }
 </script>
 
-<style></style>
+<style lang="scss">
+.beta {
+    background-image: url('../assets/shared/mobile/bg-beta.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 6rem 3rem;
+    display: grid;
+    place-items: center;
+    &__heading {
+        text-transform: uppercase;
+        font-size: 3.2rem;
+        font-weight: 700;
+        line-height: 40px;
+        letter-spacing: 3.3px;
+    }
+    &__call-to-action {
+        place-self: start;
+        margin-top: 5rem;
+        cursor: pointer;
+        display: flex;
+        line-height: 15.6px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        p {
+            padding-right: 2rem;
+        }
+    }
+}
+</style>
