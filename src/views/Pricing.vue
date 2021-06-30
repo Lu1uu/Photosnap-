@@ -21,7 +21,7 @@
         />
         <h2
             style="  letter-spacing: 2px;
-            font-size: 1.2rem; text-transform: uppercase; padding-bottom: 1rem;"
+            font-size: 1.5rem; text-transform: uppercase; padding-bottom: 1rem;"
         >
             The Features
         </h2>

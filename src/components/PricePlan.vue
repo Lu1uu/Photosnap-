@@ -37,7 +37,7 @@ export default {
     margin-bottom: 1rem;
     &__feature {
         letter-spacing: 2px;
-        font-size: 1.2rem;
+        font-size: 1.5rem;
         padding-bottom: 1rem;
     }
     &__packages {
@@ -49,7 +49,7 @@ export default {
     &__type {
         color: rgba(0, 0, 0, 0.6);
         margin-right: 5rem;
-        font-size: 1rem;
+        font-size: 1.3rem;
         text-align: center;
         * {
             padding-bottom: 0.5rem;
